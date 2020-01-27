@@ -31,6 +31,7 @@ func polishSet() TranslationSet {
 		Scroll:              "przewiń",
 		OpenConfig:          "otwórz konfigurację",
 		EditConfig:          "edytuj konfigurację",
+		FillConfig:          "wypełnij konfigurację domyślnymi wartościami",
 		Cancel:              "anuluj",
 		Remove:              "usuń",
 		HideStopped:         "Ukryj/Pokaż zatrzymane kontenery",

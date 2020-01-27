@@ -16,6 +16,7 @@ type TranslationSet struct {
 	NoViewMachingNewLineFocusedSwitchStatement string
 	OpenConfig                                 string
 	EditConfig                                 string
+	FillConfig                                 string
 	AnonymousReportingTitle                    string
 	AnonymousReportingPrompt                   string
 	ConfirmQuit                                string
@@ -125,6 +126,7 @@ func englishSet() TranslationSet {
 		Scroll:              "scroll",
 		OpenConfig:          "open lazydocker config",
 		EditConfig:          "edit lazydocker config",
+		FillConfig:          "fill lazydocker config with default values",
 		Cancel:              "cancel",
 		Remove:              "remove",
 		HideStopped:         "Hide/Show stopped containers",

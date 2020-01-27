@@ -134,6 +134,13 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		},
 		{
 			ViewName:    "project",
+			Key:         's',
+			Modifier:    gocui.ModNone,
+			Handler:     gui.handleFillConfig,
+			Description: gui.Tr.FillConfig,
+		},
+		{
+			ViewName:    "project",
 			Key:         'o',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleOpenConfig,

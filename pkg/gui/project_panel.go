@@ -174,6 +174,10 @@ func (gui *Gui) handleEditConfig(g *gocui.Gui, v *gocui.View) error {
 	return gui.editFile(gui.Config.ConfigFilename())
 }
 
+func (gui *Gui) handleFillConfig(g *gocui.Gui, v *gocui.View) error {
+	return gui.fillConfig(gui.Config.ConfigFilename())
+}
+
 func lazydockerTitle() string {
 	return `
    _                     _            _

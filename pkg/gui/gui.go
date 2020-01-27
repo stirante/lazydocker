@@ -2,6 +2,8 @@ package gui
 
 import (
 	"github.com/golang-collections/collections/stack"
+	"github.com/jesseduffield/yaml"
+	"os"
 	"strings"
 	"sync"
 
@@ -353,6 +355,16 @@ func (gui *Gui) handleDonate(g *gocui.Gui, v *gocui.View) error {
 func (gui *Gui) editFile(filename string) error {
 	_, err := gui.runSyncOrAsyncCommand(gui.OSCommand.EditFile(filename))
 	return err
+}
+
+func (gui *Gui) fillConfig(filename string) error {
+	file, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE, 0666)
+	if err != nil {
+		return err
+	}
+
+	yaml.NewEncoder(file, yaml.IncludeOmitted).Encode(gui.Config.UserConfig)
+	return nil
 }
 
 func (gui *Gui) openFile(filename string) error {
